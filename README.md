@@ -1,6 +1,6 @@
 # Angular root-config
 
-[![CircleCI](https://circleci.com/gh/angular-microfrontends/root-config.svg?style=svg)](https://circleci.com/gh/angular-microfrontends/root-config)
+[![CircleCI](https://circleci.com/gh/angular-microfrontends/root-config.svg?style=svg)](https://app.circleci.com/pipelines/github/angular-microfrontends/root-config)
 
 ## What is this?
 
