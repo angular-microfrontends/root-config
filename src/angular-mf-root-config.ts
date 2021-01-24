@@ -1,10 +1,21 @@
 import { registerApplication, start } from "single-spa";
-import * as isActive from "./activity-functions";
+import {
+  constructApplications,
+  constructRoutes,
+  constructLayoutEngine,
+} from "single-spa-layout";
 
-registerApplication({
-  name: "@angular-mf/navbar",
-  app: () => System.import("@angular-mf/navbar"),
-  activeWhen: isActive.navbar,
+const routes = constructRoutes(
+  document.querySelector("#single-spa-layout") as HTMLTemplateElement
+);
+const applications = constructApplications({
+  routes,
+  loadApp({ name }) {
+    return System.import(name);
+  },
 });
+const layoutEngine = constructLayoutEngine({ routes, applications });
 
+applications.forEach(registerApplication);
+layoutEngine.activate();
 start();
