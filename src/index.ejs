@@ -47,7 +47,6 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
         "@angular-mf/root-config": "//localhost:9000/angular-mf-root-config.js"
       }
     }
@@ -77,12 +76,12 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <!-- <nav>
-        <application name="@<%- orgName %>/navbar"></application>
-      </nav> -->
+      <nav>
+        <application name="@angular-mf/navbar"></application>
+      </nav>
       <main>
         <route default>
-          <application name="@single-spa/welcome"></application>
+          No application yet
         </route>
       </main>
     </single-spa-router>
