@@ -78,6 +78,9 @@
     body {
       margin: 0;
     }
+    .welcome {
+      padding: 1em;
+    }
   </style>
 
   <template id="single-spa-layout">
@@ -87,7 +90,9 @@
       </nav>
       <main>
         <route default>
-          Route not found.
+          <div class="welcome">
+            Welcome to Angular Microfrontends demo.
+          </div>
         </route>
         <route path="/play">
           <application name="@angular-mf/play"></application>
