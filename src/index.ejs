@@ -38,17 +38,18 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.1/lib/system/single-spa.min.js"
       }
     }
   </script>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.1/lib/system/single-spa.min.js" as="script" crossorigin="anonymous">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <script type="systemjs-importmap" src="https://angular.microfrontends.app/importmap.json"></script>
 
   <% if (isLocal) { %>
-  <script type="systemjs-importmap">
+    <script type="systemjs-importmap" src="http://localhost:9001/importmap.json"></script>
+    <script type="systemjs-importmap">
     {
       "imports": {
         "@angular-mf/root-config": "//localhost:9000/angular-mf-root-config.js"
@@ -112,6 +113,6 @@
   <script>
     System.import('@angular-mf/root-config');
   </script>
-  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
 </body>
 </html>
