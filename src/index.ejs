@@ -38,10 +38,10 @@
       }
     }
   </script>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.1/lib/system/single-spa.min.js" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
-  <script type="systemjs-importmap" src="https://angular.microfrontends.app/importmap.json"></script>
+  <script type="systemjs-importmap" src="https://storage.googleapis.com/angular.microfrontends.app/importmap.json"></script>
 
   <% if (isLocal) { %>
   <script type="systemjs-importmap">
@@ -59,12 +59,6 @@
   -->
   <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
-  <!--
-    Uncomment this if reflect-metadata is needed by any application.
-    https://single-spa.js.org/docs/ecosystem-angular/#multiple-applications
-  -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/reflect-metadata@0.1.13/Reflect.min.js"></script> -->
-
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
@@ -73,12 +67,6 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
-
-  <style>
-    body {
-      margin: 0;
-    }
-  </style>
 
   <template id="single-spa-layout">
     <single-spa-router>

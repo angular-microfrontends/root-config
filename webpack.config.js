@@ -14,12 +14,6 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    devServer: {
-      historyApiFallback: true,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    },
     plugins: [
       new HtmlWebpackPlugin({
         inject: false,
