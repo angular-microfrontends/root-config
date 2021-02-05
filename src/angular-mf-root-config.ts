@@ -11,6 +11,7 @@ const routes = constructRoutes(
 const applications = constructApplications({
   routes,
   loadApp({ name }) {
+    // @ts-ignore
     return System.import(name);
   },
 });
