@@ -67,10 +67,48 @@ Now follow the steps above for "One module at a time" for each of the modules yo
 Explaining modules, in order they should be started:
 
 1. **root-config**: single-spa root, bootstrap and loads each SPA.
+
+    ```sh
+    pnpm install
+    pnpm start
+    ```
+
 2. **shared-dependencies**: Import map configuration outside of root project.
-3. **navbar**: Angular 10 example navbar always on screen to display coexisting versions.
+
+    ```sh
+    pnpm install
+    pnpm start
+    ```
+
+3. **navbar**: Angular 10 example navbar always on screen to display coexisting versions. Don't
+    forget to override it's location.
+
+    ```sh
+    pnpm install
+    pnpm serve:single-spa:navbar
+    ```
+
 4. **shared-angular**: Library projects. Component sharing.
+
+    ```sh
+    pnpm install
+    pnpm build core
+    pnpm build single-spa-angular
+    pnpm start
+    ```
+
 5. **play**: Angular 11 using shared components.
+
+    ```sh
+    pnpm install
+    pnpm serve:single-spa:play
+    ```
+
+6. Overrides
+    1. Override "@angular-mf/core" with "http://localhost:9002/angular-mf-core/bundles/angular-mf-core.umd.js".
+    2. Override "@angular-mf/navbar" with "http://localhost:4201/main.js".
+    3. Override "@angular-mf/play" with "http://localhost:4202/main.js".
+    4. Override "single-spa-angular" with "http://localhost:9002/single-spa-angular/single-spa-angular.js".
 
 ## Adapting for your organization
 
