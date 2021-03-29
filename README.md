@@ -30,8 +30,8 @@ There are two ways to do local development. It is preferred to do one module at 
 
 ```sh
 cd root-config
-yarn install
-yarn start --https
+pnpm install
+pnpm start -- --https
 ```
 
 Go to https://localhost:9000/angular-mf-root-config.js and verify that you are able to load the file without any SSL problems. To solve SSL problems, see [these instructions](https://improveandrepeat.com/2016/09/allowing-self-signed-certificates-on-localhost-with-chrome-and-firefox/).
@@ -56,13 +56,21 @@ Refresh the page. Your local code for this module will now be running on https:/
 
 Run the root-config project locally:
 
-```
+```sh
 cd root-config
-yarn install
-yarn start
+pnpm install
+pnpm start
 ```
 
 Now follow the steps above for "One module at a time" for each of the modules you wish to work on.
+
+Explaining modules, in order they should be started:
+
+1. **root-config**: single-spa root, bootstrap and loads each SPA.
+2. **shared-dependencies**: Import map configuration outside of root project.
+3. **navbar**: Angular 10 example navbar always on screen to display coexisting versions.
+4. **shared-angular**: Library projects. Component sharing.
+5. **play**: Angular 11 using shared components.
 
 ## Adapting for your organization
 
