@@ -1,5 +1,5 @@
 {
-  "name": "@angular-mf/root-config",
+  "name": "@angular-microfrontends/root-config",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",

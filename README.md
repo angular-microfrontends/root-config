@@ -34,7 +34,7 @@ pnpm install
 pnpm start -- --https
 ```
 
-Go to https://localhost:9000/angular-mf-root-config.js and verify that you are able to load the file without any SSL problems. To solve SSL problems, see [these instructions](https://improveandrepeat.com/2016/09/allowing-self-signed-certificates-on-localhost-with-chrome-and-firefox/).
+Go to https://localhost:9000/angular-microfrontends-root-config.js and verify that you are able to load the file without any SSL problems. To solve SSL problems, see [these instructions](https://improveandrepeat.com/2016/09/allowing-self-signed-certificates-on-localhost-with-chrome-and-firefox/).
 
 Now, go to https://angular.microfrontends.app. In the browser console, run the following:
 
@@ -68,55 +68,55 @@ Explaining modules, in order they should be started:
 
 1. **root-config**: single-spa root, bootstrap and loads each SPA.
 
-    ```sh
-    pnpm install
-    pnpm start
-    ```
+   ```sh
+   pnpm install
+   pnpm start
+   ```
 
 2. **shared-dependencies**: Import map configuration outside of root project.
 
-    ```sh
-    pnpm install
-    pnpm start
-    ```
+   ```sh
+   pnpm install
+   pnpm start
+   ```
 
 3. **navbar**: Angular 10 example navbar always on screen to display coexisting versions. Don't
-    forget to override it's location.
+   forget to override it's location.
 
-    ```sh
-    pnpm install
-    pnpm serve:single-spa:navbar
-    ```
+   ```sh
+   pnpm install
+   pnpm serve:single-spa:navbar
+   ```
 
 4. **shared-angular**: Library projects. Component sharing.
 
-    ```sh
-    pnpm install
-    pnpm build core
-    pnpm build single-spa-angular
-    pnpm start
-    ```
+   ```sh
+   pnpm install
+   pnpm build core
+   pnpm build single-spa-angular
+   pnpm start
+   ```
 
 5. **play**: Angular 11 using shared components.
 
-    ```sh
-    pnpm install
-    pnpm serve:single-spa:play
-    ```
+   ```sh
+   pnpm install
+   pnpm serve:single-spa:play
+   ```
 
 6. **stats**: Angular 11 using shared components.
 
-    ```sh
-    pnpm install
-    pnpm serve:single-spa:stats
-    ```
+   ```sh
+   pnpm install
+   pnpm serve:single-spa:stats
+   ```
 
 7. Overrides
-    1. Override "@angular-mf/core" with "http://localhost:9002/angular-mf-core/bundles/angular-mf-core.umd.js".
-    2. Override "@angular-mf/navbar" with "http://localhost:4201/main.js".
-    3. Override "@angular-mf/play" with "http://localhost:4202/main.js".
-    4. Override "@angular-mf/stats" with "http://localhost:4203/main.js".
-    5. Override "single-spa-angular" with "http://localhost:9002/single-spa-angular/single-spa-angular.js".
+   1. Override "@angular-microfrontends/core" with "http://localhost:9002/angular-microfrontends-core/bundles/angular-microfrontends-core.umd.js".
+   2. Override "@angular-microfrontends/navbar" with "http://localhost:4201/main.js".
+   3. Override "@angular-microfrontends/play" with "http://localhost:4202/main.js".
+   4. Override "@angular-microfrontends/stats" with "http://localhost:4203/main.js".
+   5. Override "single-spa-angular" with "http://localhost:9002/single-spa-angular/single-spa-angular.js".
 
 ## Adapting for your organization
 

@@ -52,7 +52,7 @@
     <script type="systemjs-importmap">
     {
       "imports": {
-        "@angular-mf/root-config": "//localhost:9000/angular-mf-root-config.js"
+        "@angular-microfrontends/root-config": "//localhost:9000/angular-microfrontends-root-config.js"
       }
     }
   </script>
@@ -85,7 +85,7 @@
   <template id="single-spa-layout">
     <single-spa-router>
       <nav>
-        <application name="@angular-mf/navbar"></application>
+        <application name="@angular-microfrontends/navbar"></application>
       </nav>
       <main>
         <route default>
@@ -94,10 +94,10 @@
           </div>
         </route>
         <route path="/play">
-          <application name="@angular-mf/play"></application>
+          <application name="@angular-microfrontends/play"></application>
         </route>
         <route path="/stats">
-          <application name="@angular-mf/stats"></application>
+          <application name="@angular-microfrontends/stats"></application>
         </route>
       </main>
     </single-spa-router>
@@ -105,7 +105,7 @@
 </head>
 <body>
   <script>
-    System.import('@angular-mf/root-config');
+    System.import('@angular-microfrontends/root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
 </body>
