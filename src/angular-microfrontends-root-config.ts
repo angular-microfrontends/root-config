@@ -6,7 +6,7 @@ import {
 } from "single-spa-layout";
 
 const routes = constructRoutes(
-  document.querySelector("#single-spa-layout") as HTMLTemplateElement
+  document.querySelector("#single-spa-layout") as HTMLTemplateElement,
 );
 const applications = constructApplications({
   routes,
