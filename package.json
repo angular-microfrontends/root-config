@@ -4,7 +4,8 @@
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
-    "format": "prettier --write \"./**\"",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
     "prepare": "husky",
     "build": "webpack --mode=production"
   },

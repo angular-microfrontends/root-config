@@ -8,3 +8,4 @@ LICENSE
 dist
 coverage
 .husky
+pnpm-lock.yaml
