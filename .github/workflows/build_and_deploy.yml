@@ -65,7 +65,7 @@ jobs:
         uses: "google-github-actions/upload-cloud-storage@v2"
         with:
           path: .
-          destination: vue.microfrontends.app/${{ github.event.repository.name }}/${{ github.run_id }}
+          destination: angular.microfrontends.app/${{ github.event.repository.name }}/${{ github.run_id }}
 
       - name: Update Import Map
         uses: single-spa/action-deploy-to-import-map-deployer@v1
@@ -73,13 +73,13 @@ jobs:
           host: ${{ secrets.DEPLOYER_HOST }}
           username: ${{ secrets.DEPLOYER_USERNAME }}
           password: ${{ secrets.DEPLOYER_PASSWORD }}
-          environment-name: vue
-          service-name: "@vue-mf/${{ github.event.repository.name }}"
-          service-url: "https://vue.microfrontends.app/${{ github.event.repository.name }}/${{ github.run_id }}/vue-mf-${{ github.event.repository.name }}.js"
-          service-integrity-file-path: vue-mf-${{ github.event.repository.name }}.js
+          environment-name: angular
+          service-name: "@angular-mf/${{ github.event.repository.name }}"
+          service-url: "https://angular.microfrontends.app/${{ github.event.repository.name }}/${{ github.run_id }}/angular-mf-${{ github.event.repository.name }}.js"
+          service-integrity-file-path: angular-mf-${{ github.event.repository.name }}.js
 
       - name: Update Index.html
         uses: "google-github-actions/upload-cloud-storage@v2"
         with:
           path: ./index.html
-          destination: vue.microfrontends.app/
+          destination: angular.microfrontends.app/
