@@ -74,8 +74,8 @@ jobs:
           username: ${{ secrets.DEPLOYER_USERNAME }}
           password: ${{ secrets.DEPLOYER_PASSWORD }}
           environment-name: angular
-          service-name: "@angular-mf/${{ github.event.repository.name }}"
-          service-url: "https://angular.microfrontends.app/${{ github.event.repository.name }}/${{ github.run_id }}/angular-mf-${{ github.event.repository.name }}.js"
+          service-name: "@angular-microfrontends/${{ github.event.repository.name }}"
+          service-url: "https://angular.microfrontends.app/${{ github.event.repository.name }}/${{ github.run_id }}/angular-microfrontends-${{ github.event.repository.name }}.js"
           service-integrity-file-path: angular-mf-${{ github.event.repository.name }}.js
 
       - name: Update Index.html
