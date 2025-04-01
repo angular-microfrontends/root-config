@@ -5,8 +5,16 @@ import {
   constructLayoutEngine,
 } from "single-spa-layout";
 
+const data = {
+  props: {
+    favoriteDog: "Franklin",
+  },
+  loaders: {},
+};
+
 const routes = constructRoutes(
   document.querySelector("#single-spa-layout") as HTMLTemplateElement,
+  data,
 );
 const applications = constructApplications({
   routes,
