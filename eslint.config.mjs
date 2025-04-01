@@ -13,7 +13,7 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends("important-stuff", "plugin:prettier/recommended"),
+  ...compat.extends("ts-important-stuff", "plugin:prettier/recommended"),
   {
     files: ["**/*.ts"],
     languageOptions: {
